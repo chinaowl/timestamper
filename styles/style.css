@@ -10,14 +10,13 @@ body {
     display: inline-block;
     box-sizing: border-box;
     width: 49%;
-    height: 40vh;
+    height: 8em;
     text-align: center; }
     body div p {
       position: relative;
       margin: 0;
       padding: 0;
-      top: 50%;
-      transform: translate(0, -50%); }
+      top: 40%; }
 
 #enterStore {
   background-color: lightgreen; }
@@ -34,10 +33,16 @@ body {
 #numTimestamps {
   width: 100%;
   font-size: 0.75em;
-  height: 10vh; }
+  height: 1.5em; }
+  #numTimestamps p {
+    top: 10%; }
 
 #clearAll {
   background-color: red;
   color: white;
   font-size: 0.75em;
-  height: 5vh; }
+  height: 1.5em;
+  width: auto;
+  padding: 0 0.5em 0 0.5em; }
+  #clearAll p {
+    top: 10%; }
