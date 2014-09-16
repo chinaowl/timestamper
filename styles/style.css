@@ -10,7 +10,7 @@ body {
     display: inline-block;
     box-sizing: border-box;
     width: 49%;
-    height: 8em;
+    height: 4em;
     text-align: center; }
     body div p {
       position: relative;
@@ -30,19 +30,29 @@ body {
 #exitLine {
   background-color: plum; }
 
-#numTimestamps {
+#abandonLine {
+  width: 99%;
+  background-color: silver; }
+
+#addAssociate {
+  background-color: gold; }
+
+#removeAssociate {
+  background-color: lightcoral; }
+
+#numTimestamps, #numInLine, #numAssociates {
   width: 100%;
   font-size: 0.75em;
   height: 1.5em; }
-  #numTimestamps p {
+  #numTimestamps p, #numInLine p, #numAssociates p {
     top: 10%; }
 
-#clearAll {
+#undo, #clearAll {
   background-color: red;
   color: white;
   font-size: 0.75em;
   height: 1.5em;
   width: auto;
   padding: 0 0.5em 0 0.5em; }
-  #clearAll p {
+  #undo p, #clearAll p {
     top: 10%; }

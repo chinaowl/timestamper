@@ -14,7 +14,7 @@ body
 		display: inline-block;
 		box-sizing: border-box;
 		width: 49%;
-		height: 8em;
+		height: 4em;
 		text-align: center;
 
 		p
@@ -47,7 +47,23 @@ body
 	background-color: plum;
 }
 
-#numTimestamps
+#abandonLine
+{
+	width: 99%;
+	background-color: silver;
+}
+
+#addAssociate
+{
+	background-color: gold;
+}
+
+#removeAssociate
+{
+	background-color: lightcoral;
+}
+
+#numTimestamps, #numInLine, #numAssociates
 {
 	width: 100%;
 	font-size: 0.75em;
@@ -59,7 +75,7 @@ body
 	}
 }
 
-#clearAll
+#undo, #clearAll
 {
 	background-color: red;
 	color: white;
