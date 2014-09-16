@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang="en" ng-app="timestamper">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+	 	<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<link rel="stylesheet" href="styles/style.css" media="screen">
+
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/firebase/firebase.js"></script>
+		<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+		<script src="scripts/script.js"></script>
+	</head>
+
+	<body ng-controller="AppController as app">
+		<div id="enterStore" ng-click="app.enterStore()"><p>Enter Store</p></div>
+		<div id="exitStore" ng-click="app.exitStore()"><p>Exit Store</p></div>
+		<div id="enterLine" ng-click="app.enterLine()"><p>Enter Line</p></div>
+		<div id="exitLine" ng-click="app.exitLine()"><p>Exit Line</p></div>
+		<div id="numTimestamps"><p>{{timestamps.length}} timestamps recorded</p></div>
+	</body>
+</html>

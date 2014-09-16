@@ -1,0 +1,37 @@
+@import url(../bower_components/normalize-css/normalize.css);
+body {
+  font-size: 1.5em;
+  font-family: Helvetica;
+  text-align: center;
+  margin: 0 auto;
+  position: relative; }
+  body div {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 49%;
+    height: 40vh;
+    text-align: center; }
+    body div p {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      top: 50%;
+      transform: translate(0, -50%); }
+
+#enterStore {
+  background-color: lightgreen; }
+
+#exitStore {
+  background-color: lightpink; }
+
+#enterLine {
+  background-color: lightblue; }
+
+#exitLine {
+  background-color: plum; }
+
+#numTimestamps {
+  width: 100%;
+  font-size: 0.75em;
+  height: 20vh; }
