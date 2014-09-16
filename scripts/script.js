@@ -31,5 +31,11 @@
 			$log.log("Exit line @ " + timestamp);
 			timestamps.$add({exitLine: timestamp});
 		};
+
+		this.clearAll = function() {
+			for (var i = 0; i < timestamps.length; i++) {
+				timestamps.$remove(i);
+			}
+		};
 	}]);
 })();
