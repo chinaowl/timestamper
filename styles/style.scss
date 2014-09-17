@@ -75,15 +75,15 @@ body
 	}
 }
 
-#undo, #clearAll
+#undo, #clearAll, #downloadData
 {
 	background-color: red;
 	color: white;
 	font-size: 0.75em;
 	height: 2em;
-	width: 45%;
+	width: 40%;
 	padding: 0 0.5em 0 0.5em;
-	margin: 0.5em 0.5em 0.5em 0.5em;
+	margin: 0.5em 0.5em 0.2em 0.5em;
 	
 	p
 	{
@@ -99,4 +99,10 @@ body
 #clearAll
 {
 	float: right;
+}
+
+#downloadData
+{
+	background-color: green;
+	width: 40%;
 }

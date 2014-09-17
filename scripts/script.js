@@ -1,6 +1,6 @@
 angular.module('timestamper', ['firebase'])
 
-.controller('appController', ['$scope', '$firebase', '$filter', '$log', function($scope, $firebase, $filter, $log) {
+.controller('appController', ['$scope', '$firebase', '$filter', function ($scope, $firebase, $filter) {
 	var ref = new Firebase('https://gap-timestamper.firebaseio.com');
 	var sync = $firebase(ref);
 
@@ -10,59 +10,98 @@ angular.module('timestamper', ['firebase'])
 	$scope.numInLine = 0;
 	$scope.numAssociates = 0;
 
-	$scope.enterStore = function() {
-		var timestamp = $filter('date')(new Date(), 'medium');
-		$log.log("Enter store @ " + timestamp);
-		timestamps.$add({enterStore: timestamp});
+	var dateFormat = 'MM/dd/yyyy HH:mm:ss';
+
+	var recordTimestamp = function (type) {
+		var timestamp = $filter('date')(new Date(), dateFormat);
+		var dataToAdd = {};
+		dataToAdd[type] = timestamp;
+		timestamps.$add(dataToAdd);
+		console.log(type + ',' + timestamp);
 	};
 
-	$scope.exitStore = function() {
-		var timestamp = $filter('date')(new Date(), 'medium');
-		$log.log("Exit store @ " + timestamp);
-		timestamps.$add({exitStore: timestamp});
+	$scope.enterStore = function () {
+		recordTimestamp('Enter Store');
 	};
 
-	$scope.enterLine = function() {
-		var timestamp = $filter('date')(new Date(), 'medium');
-		$log.log("Enter line @ " + timestamp);
-		timestamps.$add({enterLine: timestamp});
+	$scope.exitStore = function () {
+		recordTimestamp('Exit Store');
+	};
+
+	$scope.enterLine = function () {
+		recordTimestamp('Enter Line');
 		$scope.numInLine++;
 	};
 
-	$scope.exitLine = function() {
-		var timestamp = $filter('date')(new Date(), 'medium');
-		$log.log("Exit line @ " + timestamp);
-		timestamps.$add({exitLine: timestamp});
+	$scope.exitLine = function () {
+		recordTimestamp('Exit Line');
 		$scope.numInLine--;
 	};
 
-	$scope.abandonLine = function() {
-		var timestamp = $filter('date')(new Date(), 'medium');
-		$log.log("Abandon line @ " + timestamp);
-		timestamps.$add({abandonLine: timestamp});
+	$scope.abandonLine = function () {
+		recordTimestamp('Abandon Line');
 	};
 
-	$scope.addAssociate = function() {
-		var timestamp = $filter('date')(new Date(), 'medium');
-		$log.log("Add associate @ " + timestamp);
-		timestamps.$add({addAssociate: timestamp});
+	$scope.addAssociate = function () {
+		recordTimestamp('Add Associate');
 		$scope.numAssociates++;
 	};
 
-	$scope.removeAssociate = function() {
-		var timestamp = $filter('date')(new Date(), 'medium');
-		$log.log("Remove associate @ " + timestamp);
-		timestamps.$add({removeAssociate: timestamp});
+	$scope.removeAssociate = function () {
+		recordTimestamp('Remove Associate');
 		$scope.numAssociates--;
 	};
 
-	$scope.undo = function() {
+	$scope.undo = function () {
 		timestamps.$remove(timestamps.length - 1);
 	};
 
-	$scope.clearAll = function() {
+	$scope.clearAll = function () {
 		for (var i = 0; i < timestamps.length; i++) {
 			timestamps.$remove(i);
 		}
 	};
+
+	$scope.downloadData = function() {
+		ref.on('value', function (snapshot) {
+			var data = snapshot.val();
+			var dataString = '';
+			for (var key in data) {
+				var typeAndTimestamp = data[key];
+				var type = Object.keys(typeAndTimestamp)[0];
+				dataString += type + ',' + typeAndTimestamp[type] + '\n';
+			}
+			console.save(dataString, 'timestamps.txt');
+		}, function (errorObject) {
+			console.log('The read failed: ' + errorObject.code);
+		});
+	};
 }]);
+
+/* Source: http://bgrins.github.io/devtools-snippets/#console-save */
+(function (console) {
+
+    console.save = function (data, filename) {
+
+        if (!data) {
+            console.error('Console.save: No data');
+            return;
+        }
+
+        if (!filename) filename = 'console.json';
+
+        if (typeof data === "object") {
+            data = JSON.stringify(data, undefined, 4);
+        }
+
+        var blob = new Blob([data], {type: 'text/json'}),
+            e    = document.createEvent('MouseEvents'),
+            a    = document.createElement('a');
+
+        a.download = filename;
+        a.href = window.URL.createObjectURL(blob);
+        a.dataset.downloadurl =  ['text/json', a.download, a.href].join(':');
+        e.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        a.dispatchEvent(e);
+    };
+})(console);
