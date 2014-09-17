@@ -17,18 +17,18 @@
 		<script src="scripts/script.js"></script>
 	</head>
 
-	<body ng-controller="AppController as app">
-		<div id="enterStore" ng-click="app.enterStore()"><p>Enter Store</p></div>
-		<div id="exitStore" ng-click="app.exitStore()"><p>Exit Store</p></div>
-		<div id="enterLine" ng-click="app.enterLine()"><p>Enter Line</p></div>
-		<div id="exitLine" ng-click="app.exitLine()"><p>Exit Line</p></div>
-		<div id="abandonLine" ng-click="app.abandonLine()"><p>Abandon Line (No Transaction)</p></div>
-		<div id="addAssociate" ng-click="app.addAssociate()"><p>+ Associate</p></div>
-		<div id="removeAssociate" ng-click="app.removeAssociate()"><p>&minus; Associate</p></div>
+	<body ng-controller="appController">
+		<div id="enterStore" ng-click="enterStore()"><p>Enter Store</p></div>
+		<div id="exitStore" ng-click="exitStore()"><p>Exit Store</p></div>
+		<div id="enterLine" ng-click="enterLine()"><p>Enter Line</p></div>
+		<div id="exitLine" ng-click="exitLine()"><p>Exit Line</p></div>
+		<div id="abandonLine" ng-click="abandonLine()"><p>Abandon Line</p></div>
+		<div id="addAssociate" ng-click="addAssociate()"><p>+ Associate</p></div>
+		<div id="removeAssociate" ng-click="removeAssociate()"><p>&minus; Associate</p></div>
 		<div id="numInLine"><p>{{numInLine}} customers currently in line</p></div>
 		<div id="numAssociates"><p>{{numAssociates}} associates currently at cash wrap</p></div>
 		<div id="numTimestamps"><p>{{timestamps.length}} timestamps recorded</p></div>
-		<div id="undo" ng-click="app.undo()"><p>Undo</p></div>
-		<div id="clearAll" ng-click="app.clearAll()"><p>Clear all</p></div>
+		<div id="undo" ng-click="undo()"><p>Undo</p></div>
+		<div id="clearAll" ng-click="clearAll()"><p>Clear all</p></div>
 	</body>
 </html>

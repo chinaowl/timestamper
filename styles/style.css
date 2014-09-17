@@ -16,7 +16,7 @@ body {
       position: relative;
       margin: 0;
       padding: 0;
-      top: 40%; }
+      top: 35%; }
 
 #enterStore {
   background-color: lightgreen; }
@@ -51,8 +51,15 @@ body {
   background-color: red;
   color: white;
   font-size: 0.75em;
-  height: 1.5em;
-  width: auto;
-  padding: 0 0.5em 0 0.5em; }
+  height: 2em;
+  width: 45%;
+  padding: 0 0.5em 0 0.5em;
+  margin: 0.5em 0.5em 0.5em 0.5em; }
   #undo p, #clearAll p {
-    top: 10%; }
+    top: 25%; }
+
+#undo {
+  float: left; }
+
+#clearAll {
+  float: right; }
