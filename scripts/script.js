@@ -40,6 +40,7 @@ angular.module('timestamper', ['firebase'])
 
 	$scope.abandonLine = function () {
 		recordTimestamp('Abandon Line');
+		$scope.numInLine--;
 	};
 
 	$scope.addAssociate = function () {
