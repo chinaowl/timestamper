@@ -30,17 +30,13 @@ body
 #initialCount
 {
 	font-size: 0.75em;
-	width: 100%;
+	width: 97.5%;
 	height: auto;
-	margin-top: 0.5em;
-	margin-left: 0.5em;
-	margin-bottom: 0.5em;
-	position: relative;
-	text-align: left;
+	margin: 0.5em 0;
 
 	input
 	{
-		width: 3em;
+		width: 10%;
 	}
 }
 
@@ -66,7 +62,7 @@ body
 
 #abandonLine
 {
-	width: 99%;
+	width: 97.5%;
 	background-color: silver;
 }
 
@@ -94,28 +90,19 @@ body
 
 #save, #undo, #clearAll, #downloadData
 {
+	display: inline-block;
 	background-color: red;
 	color: white;
 	font-size: 0.75em;
 	height: 2em;
 	width: auto;
 	padding: 0 0.5em 0 0.5em;
-	margin: 0.5em 0.5em 0.2em 0.5em;
+	margin: 0.5em 0 0.5em 0;
 	
 	p
 	{
-		top: 25%;
+		top: 22.5%;
 	}
-}
-
-#undo
-{
-	float: left;
-}
-
-#clearAll
-{
-	float: right;
 }
 
 #save, #downloadData
@@ -125,13 +112,7 @@ body
 
 #save
 {
-	position: absolute;
-	margin-top: 0;
-	right: 0.5em;
-	width: 5.5em;
-
-	p
-	{
-		top: 22.5%;
-	}
+	display: block;
+	width: 50%;
+	margin: 0 auto 0.5em auto;
 }
