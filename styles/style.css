@@ -9,7 +9,7 @@ body {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
-    width: 49%;
+    width: 48%;
     height: 4em;
     text-align: center; }
     body div p {
@@ -17,6 +17,18 @@ body {
       margin: 0;
       padding: 0;
       top: 35%; }
+
+#initialCount {
+  font-size: 0.75em;
+  width: 100%;
+  height: auto;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+  text-align: left; }
+  #initialCount input {
+    width: 3em; }
 
 #enterStore {
   background-color: lightgreen; }
@@ -47,15 +59,15 @@ body {
   #numTimestamps p, #numInLine p, #numAssociates p {
     top: 10%; }
 
-#undo, #clearAll, #downloadData {
+#save, #undo, #clearAll, #downloadData {
   background-color: red;
   color: white;
   font-size: 0.75em;
   height: 2em;
-  width: 40%;
+  width: auto;
   padding: 0 0.5em 0 0.5em;
   margin: 0.5em 0.5em 0.2em 0.5em; }
-  #undo p, #clearAll p, #downloadData p {
+  #save p, #undo p, #clearAll p, #downloadData p {
     top: 25%; }
 
 #undo {
@@ -64,6 +76,13 @@ body {
 #clearAll {
   float: right; }
 
-#downloadData {
-  background-color: green;
-  width: auto; }
+#save, #downloadData {
+  background-color: green; }
+
+#save {
+  position: absolute;
+  margin-top: 0;
+  right: 0.5em;
+  width: 5.5em; }
+  #save p {
+    top: 22.5%; }

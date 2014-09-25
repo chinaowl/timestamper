@@ -13,7 +13,7 @@ body
 		position: relative;
 		display: inline-block;
 		box-sizing: border-box;
-		width: 49%;
+		width: 48%;
 		height: 4em;
 		text-align: center;
 
@@ -24,6 +24,23 @@ body
 			padding: 0;
 			top: 35%;
 		}
+	}
+}
+
+#initialCount
+{
+	font-size: 0.75em;
+	width: 100%;
+	height: auto;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	margin-bottom: 0.5em;
+	position: relative;
+	text-align: left;
+
+	input
+	{
+		width: 3em;
 	}
 }
 
@@ -75,13 +92,13 @@ body
 	}
 }
 
-#undo, #clearAll, #downloadData
+#save, #undo, #clearAll, #downloadData
 {
 	background-color: red;
 	color: white;
 	font-size: 0.75em;
 	height: 2em;
-	width: 40%;
+	width: auto;
 	padding: 0 0.5em 0 0.5em;
 	margin: 0.5em 0.5em 0.2em 0.5em;
 	
@@ -101,8 +118,20 @@ body
 	float: right;
 }
 
-#downloadData
+#save, #downloadData
 {
 	background-color: green;
-	width: auto;
+}
+
+#save
+{
+	position: absolute;
+	margin-top: 0;
+	right: 0.5em;
+	width: 5.5em;
+
+	p
+	{
+		top: 22.5%;
+	}
 }
