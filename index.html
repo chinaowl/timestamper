@@ -19,8 +19,8 @@
 
 	<body ng-controller="appController">
 		<div id="initialCount">
-			In store: <input ng-model="initialCount.numInStore">
-			At cash wrap: <input ng-model="initialCount.numAssociates">
+			In store: <input type="number" ng-model="initialCount.numInStore">
+			At cash wrap: <input type="number" ng-model="initialCount.numAssociates">
 		</div>
 		<div id="save" ng-click="saveInitialCount()"><p>Save</p></div>
 		<div id="enterStore" ng-click="enterStore()"><p>Enter Store</p></div>
