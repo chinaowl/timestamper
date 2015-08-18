@@ -1,40 +1,40 @@
 <!doctype html>
 
 <html lang="en" ng-app="timestamper">
-	<head>
-		<meta charset="utf-8">
-		<title></title>
+<head>
+    <meta charset="utf-8">
+    <title></title>
 
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, user-scalable=no">
-	 	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-		<link rel="stylesheet" href="styles/style.css" media="screen">
+    <link rel="stylesheet" href="styles/style.css" media="screen">
 
-		<script src="bower_components/angular/angular.min.js"></script>
-		<script src="bower_components/firebase/firebase.js"></script>
-		<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
-		<script src="scripts/script.js"></script>
-	</head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
 
-	<body ng-controller="appController">
-		<div id="initialCount">
-			In store: <input type="number" ng-model="initialCount.numInStore">
-			At cash wrap: <input type="number" ng-model="initialCount.numAssociates">
-		</div>
-		<div id="save" ng-click="saveInitialCount()"><p>Save</p></div>
-		<div id="enterStore" ng-click="enterStore()"><p>Enter Store</p></div>
-		<div id="exitStore" ng-click="exitStore()"><p>Exit Store</p></div>
-		<div id="enterLine" ng-click="enterLine()"><p>Enter Line</p></div>
-		<div id="exitLine" ng-click="exitLine()"><p>Exit Line</p></div>
-		<div id="abandonLine" ng-click="abandonLine()"><p>Abandon Line</p></div>
-		<div id="addAssociate" ng-click="addAssociate()"><p>+ Associate</p></div>
-		<div id="removeAssociate" ng-click="removeAssociate()"><p>&minus; Associate</p></div>
-		<div id="numInLine"><p>{{numInLine}} customers currently in line</p></div>
-		<div id="numAssociates"><p>{{numAssociates}} associates currently at cash wrap</p></div>
-		<div id="numTimestamps"><p>{{timestamps.length}} timestamps recorded</p></div>
-		<div id="undo" ng-click="undo()"><p>Undo</p></div>
-		<div id="downloadData" ng-click="downloadData()"><p>Download Data</p></div>
-		<div id="clearAll" ng-click="clearAll()"><p>Clear All</p></div>
-	</body>
+<body ng-controller="appController">
+<div id="initialCount">
+    In store: <input type="number" ng-model="initialCount.numInStore">
+    At cash wrap: <input type="number" ng-model="initialCount.numAssociates">
+</div>
+<div id="save" ng-click="saveInitialCount()"><p>Save</p></div>
+<div id="enterStore" ng-click="enterStore()"><p>Enter Store</p></div>
+<div id="exitStore" ng-click="exitStore()"><p>Exit Store</p></div>
+<div id="enterLine" ng-click="enterLine()"><p>Enter Line</p></div>
+<div id="exitLine" ng-click="exitLine()"><p>Exit Line</p></div>
+<div id="abandonLine" ng-click="abandonLine()"><p>Abandon Line</p></div>
+<div id="addAssociate" ng-click="addAssociate()"><p>+ Associate</p></div>
+<div id="removeAssociate" ng-click="removeAssociate()"><p>&minus; Associate</p></div>
+<div id="numInLine"><p>{{numInLine}} customers currently in line</p></div>
+<div id="numAssociates"><p>{{numAssociates}} associates currently at cash wrap</p></div>
+<div id="numTimestamps"><p>{{timestamps.length}} timestamps recorded</p></div>
+<div id="undo" ng-click="undo()"><p>Undo</p></div>
+<div id="downloadData" ng-click="downloadData()"><p>Download Data</p></div>
+<div id="clearAll" ng-click="clearAll()"><p>Clear All</p></div>
+</body>
 </html>

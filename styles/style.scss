@@ -1,118 +1,100 @@
 @import url(../bower_components/normalize-css/normalize.css);
 
-body
-{
-	font-size: 1.5em;
-	font-family: Helvetica;
-	text-align: center;
-	margin: 0 auto;
-	position: relative;
+body {
+  font-size: 1.5em;
+  font-family: Helvetica;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
 
-	div
-	{
-		position: relative;
-		display: inline-block;
-		box-sizing: border-box;
-		width: 48%;
-		height: 4em;
-		text-align: center;
+  div {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 48%;
+    height: 4em;
+    text-align: center;
 
-		p
-		{
-			position: relative;
-			margin: 0;
-			padding: 0;
-			top: 35%;
-		}
-	}
+    p {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      top: 35%;
+    }
+  }
 }
 
-#initialCount
-{
-	font-size: 0.75em;
-	width: 97.5%;
-	height: auto;
-	margin: 0.5em 0;
+#initialCount {
+  font-size: 0.75em;
+  width: 97.5%;
+  height: auto;
+  margin: 0.5em 0;
 
-	input
-	{
-		width: 10%;
-	}
+  input {
+    width: 10%;
+  }
 }
 
-#enterStore
-{
-	background-color: lightgreen;
+#enterStore {
+  background-color: lightgreen;
 }
 
-#exitStore
-{
-	background-color: lightpink;
+#exitStore {
+  background-color: lightpink;
 }
 
-#enterLine
-{
-	background-color: lightblue;
+#enterLine {
+  background-color: lightblue;
 }
 
-#exitLine
-{
-	background-color: plum;
+#exitLine {
+  background-color: plum;
 }
 
-#abandonLine
-{
-	width: 97.5%;
-	background-color: silver;
+#abandonLine {
+  width: 97.5%;
+  background-color: silver;
 }
 
-#addAssociate
-{
-	background-color: gold;
+#addAssociate {
+  background-color: gold;
 }
 
-#removeAssociate
-{
-	background-color: lightcoral;
+#removeAssociate {
+  background-color: lightcoral;
 }
 
-#numTimestamps, #numInLine, #numAssociates
-{
-	width: 100%;
-	font-size: 0.75em;
-	height: 1.5em;
+#numTimestamps, #numInLine, #numAssociates {
+  width: 100%;
+  font-size: 0.75em;
+  height: 1.5em;
 
-	p
-	{
-		top: 10%;
-	}
+  p {
+    top: 10%;
+  }
 }
 
-#save, #undo, #clearAll, #downloadData
-{
-	display: inline-block;
-	background-color: red;
-	color: white;
-	font-size: 0.75em;
-	height: 2em;
-	width: auto;
-	padding: 0 0.5em 0 0.5em;
-	margin: 0.5em 0 0.5em 0;
-	
-	p
-	{
-		top: 22.5%;
-	}
+#save, #undo, #clearAll, #downloadData {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 0.75em;
+  height: 2em;
+  width: auto;
+  padding: 0 0.5em 0 0.5em;
+  margin: 0.5em 0 0.5em 0;
+
+  p {
+    top: 22.5%;
+  }
 }
 
-#save, #downloadData
-{
-	background-color: green;
+#save, #downloadData {
+  background-color: green;
 }
 
-#save
-{
-	display: block;
-	width: 50%;
-	margin: 0 auto 0.5em auto;
+#save {
+  display: block;
+  width: 50%;
+  margin: 0 auto 0.5em auto;
 }
