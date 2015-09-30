@@ -1,10 +1,9 @@
 angular.module('timestamper', ['firebase'])
 
-    .controller('appController', ['$scope', '$firebase', '$filter', function ($scope, $firebase) {
-        var ref = new Firebase('https://gap-timestamper.firebaseio.com');
-        var sync = $firebase(ref);
+    .controller('appController', ['$scope', '$firebaseArray', '$filter', function ($scope, $firebaseArray) {
+        var ref = new Firebase('https://chinaowl-timestamper.firebaseio.com');
+        var timestamps = $firebaseArray(ref);
 
-        var timestamps = sync.$asArray();
         $scope.timestamps = timestamps;
 
         $scope.initialCount = {

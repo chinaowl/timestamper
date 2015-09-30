@@ -1,9 +1,13 @@
 {
-  "firebase": "gap-timestamper",
+  "firebase": "chinaowl-timestamper",
   "public": ".",
   "ignore": [
-    "firebase.json",
     "**/.*",
-    "**/node_modules/**"
+    "**/node_modules/**",
+    "firebase.json",
+    "gulpfile.js",
+    "package.json",
+    "README.md",
+    "styles/style.scss"
   ]
 }
